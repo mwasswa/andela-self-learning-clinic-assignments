@@ -12,7 +12,7 @@ def prime_numbers_in_range(n):
                     primes_nums.append(num)
         return primes_nums
     else:
-        raise TypeError("Number must be an integer greater than 2")
+        return []
 
 for num in range(1000, 1000001, 1000):
     start = time.time()
