@@ -1,3 +1,4 @@
+import time
 def prime_numbers_in_range(n):
     if isinstance(n,int) and n > 2:
         primes_nums = [2]
@@ -13,8 +14,8 @@ def prime_numbers_in_range(n):
     else:
         raise TypeError("Number must be an integer greater than 2")
 
-
-print(prime_numbers_in_range(10))
-print(prime_numbers_in_range(100))
-print(prime_numbers_in_range(1000))
-print(prime_numbers_in_range(10000))
+for num in range(1000, 1000001, 1000):
+    start = time.time()
+    prime_numbers_in_range(num)
+    end = time.time()
+    print('size: %d time: %f' % (num, end-start))
